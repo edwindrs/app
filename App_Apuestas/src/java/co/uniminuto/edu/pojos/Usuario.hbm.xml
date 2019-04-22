@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 17/04/2019 01:32:48 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="co.uniminuto.edu.pojos.Usuario" table="usuario" catalog="app" optimistic-lock="version">
+        <id name="idusuario" type="int">
+            <column name="idusuario" />
+            <generator class="assigned" />
+        </id>
+        <property name="password" type="string">
+            <column name="password" length="45" />
+        </property>
+        <property name="nombre" type="string">
+            <column name="nombre" length="45" />
+        </property>
+        <property name="apellido" type="string">
+            <column name="apellido" length="45" />
+        </property>
+        <property name="telefono" type="string">
+            <column name="telefono" length="45" />
+        </property>
+        <property name="correo" type="string">
+            <column name="correo" length="45" />
+        </property>
+        <property name="saldo" type="java.lang.Integer">
+            <column name="saldo" />
+        </property>
+        <property name="rol" type="java.lang.Byte">
+            <column name="rol" />
+        </property>
+    </class>
+</hibernate-mapping>

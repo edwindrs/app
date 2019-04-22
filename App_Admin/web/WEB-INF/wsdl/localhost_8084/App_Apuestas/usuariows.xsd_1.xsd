@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2-hudson-740-. --><xs:schema xmlns:tns="http://ws.edu.uniminuto.co/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://ws.edu.uniminuto.co/">
+
+<xs:element name="consultaSaldo" type="tns:consultaSaldo" />
+
+<xs:element name="consultaSaldoResponse" type="tns:consultaSaldoResponse" />
+
+<xs:element name="consultaUsuario" type="tns:consultaUsuario" />
+
+<xs:element name="consultaUsuarioResponse" type="tns:consultaUsuarioResponse" />
+
+<xs:element name="registro" type="tns:registro" />
+
+<xs:element name="registroResponse" type="tns:registroResponse" />
+
+<xs:element name="restarValor" type="tns:restarValor" />
+
+<xs:element name="sumarValor" type="tns:sumarValor" />
+
+<xs:complexType name="consultaSaldo">
+<xs:sequence>
+<xs:element name="idusuario" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="consultaSaldoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="registro">
+<xs:sequence>
+<xs:element name="idusuario" type="xs:int" />
+<xs:element name="password" type="xs:string" minOccurs="0" />
+<xs:element name="nombre" type="xs:string" minOccurs="0" />
+<xs:element name="apellido" type="xs:string" minOccurs="0" />
+<xs:element name="telefono" type="xs:string" minOccurs="0" />
+<xs:element name="correo" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="registroResponse">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="sumarValor">
+<xs:sequence>
+<xs:element name="idusuario" type="xs:int" />
+<xs:element name="valor" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="restarValor">
+<xs:sequence>
+<xs:element name="idusuario" type="xs:int" />
+<xs:element name="valor" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="consultaUsuario">
+<xs:sequence>
+<xs:element name="idusuario" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="consultaUsuarioResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:usuario" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="usuario">
+<xs:sequence>
+<xs:element name="apellido" type="xs:string" minOccurs="0" />
+<xs:element name="correo" type="xs:string" minOccurs="0" />
+<xs:element name="idusuario" type="xs:int" />
+<xs:element name="nombre" type="xs:string" minOccurs="0" />
+<xs:element name="password" type="xs:string" minOccurs="0" />
+<xs:element name="rol" type="xs:byte" minOccurs="0" />
+<xs:element name="saldo" type="xs:int" minOccurs="0" />
+<xs:element name="telefono" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+        *** GENERATED FROM jax-ws.xml - DO NOT EDIT !                             ***
+        *** TO MODIFY wsimport options USE Web Service node -> Edit WS Attributes ***
+        *** TO CHANGE TARGETS GENERATED TO jaxws-build.xml COPY THOSE             ***
+        *** TARGETS TO ../build.xml AND MODIFY THAT FILE INSTEAD                  ***
+
+        --><project xmlns:xalan="http://xml.apache.org/xslt" xmlns:webproject2="http://www.netbeans.org/ns/web-project/2" xmlns:jaxws="http://www.netbeans.org/ns/jax-ws/1">
+    <!--
+                ===================
+                JAX-WS WSGEN SECTION
+                ===================
+            -->
+    <!--
+                ===================
+                JAX-WS WSIMPORT SECTION
+                ===================
+            -->
+    <target name="wsimport-init" depends="init">
+        <fail if="${wsimport.bad.version}" message="WsImport ant task defined in the classpath ${j2ee.platform.wsimport.classpath} has a serious bug. See http://wiki.netbeans.org/MetroIssue for details."/>
+        <mkdir dir="${build.generated.sources.dir}/jax-ws"/>
+        <property name="j2ee.platform.wsimport.classpath" value="${libs.jaxws21.classpath}"/>
+        <taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
+            <classpath path="${java.home}/../lib/tools.jar:${j2ee.platform.wsimport.classpath}:${javac.classpath}"/>
+        </taskdef>
+        <condition property="conf-dir" value="${conf.dir}/" else="">
+            <isset property="conf.dir"/>
+        </condition>
+    </target>
+    <target name="wsimport-client-usuariows" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/usuariows"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/usuariows" destdir="${build.generated.dir}/jax-wsCache/usuariows" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/usuariows/wsdl/localhost_8084/App_Apuestas/usuariows.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8084/App_Apuestas/usuariows?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/usuariows/wsdl/localhost_8084/App_Apuestas/usuariows.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/usuariows"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/usuariows">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-usuariows" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/co/uniminuto/edu/ws"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/usuariows"/>
+    </target>
+    <target name="wsimport-client-deportews" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/deportews"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/deportews" destdir="${build.generated.dir}/jax-wsCache/deportews" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/deportews/wsdl/localhost_8084/App_Apuestas/deportews.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8084/App_Apuestas/deportews?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/deportews/wsdl/localhost_8084/App_Apuestas/deportews.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/deportews"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/deportews">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-deportews" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/co/uniminuto/edu/ws"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/deportews"/>
+    </target>
+    <target name="wsimport-client-equipows" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/equipows"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/equipows" destdir="${build.generated.dir}/jax-wsCache/equipows" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/equipows/wsdl/localhost_8084/App_Apuestas/equipows.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8084/App_Apuestas/equipows?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/equipows/wsdl/localhost_8084/App_Apuestas/equipows.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/equipows"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/equipows">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-equipows" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/co/uniminuto/edu/ws"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/equipows"/>
+    </target>
+    <target name="wsimport-client-partidows" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/partidows"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/partidows" destdir="${build.generated.dir}/jax-wsCache/partidows" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/partidows/wsdl/localhost_8084/App_Apuestas/partidows.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8084/App_Apuestas/partidows?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/partidows/wsdl/localhost_8084/App_Apuestas/partidows.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/partidows"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/partidows">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-partidows" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/co/uniminuto/edu/ws"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/partidows"/>
+    </target>
+    <target name="wsimport-client-apuestaws" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/apuestaws"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/apuestaws" destdir="${build.generated.dir}/jax-wsCache/apuestaws" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/apuestaws/wsdl/localhost_8084/App_Apuestas/apuestaws.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8084/App_Apuestas/apuestaws?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/apuestaws/wsdl/localhost_8084/App_Apuestas/apuestaws.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/apuestaws"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/apuestaws">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-apuestaws" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/co/uniminuto/edu/ws"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/apuestaws"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-usuariows, wsimport-client-deportews, wsimport-client-equipows, wsimport-client-partidows, wsimport-client-apuestaws"/>
+</project>

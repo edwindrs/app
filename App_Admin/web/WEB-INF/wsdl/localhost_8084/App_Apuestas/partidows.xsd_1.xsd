@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2-hudson-740-. --><xs:schema xmlns:tns="http://ws.edu.uniminuto.co/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://ws.edu.uniminuto.co/">
+
+<xs:element name="actualizarResultado" type="tns:actualizarResultado" />
+
+<xs:element name="actualizarResultadoResponse" type="tns:actualizarResultadoResponse" />
+
+<xs:element name="consultaPartido" type="tns:consultaPartido" />
+
+<xs:element name="consultaPartidoResponse" type="tns:consultaPartidoResponse" />
+
+<xs:element name="crearPartido" type="tns:crearPartido" />
+
+<xs:element name="crearPartidoResponse" type="tns:crearPartidoResponse" />
+
+<xs:element name="verPartidos" type="tns:verPartidos" />
+
+<xs:element name="verPartidosActualizar" type="tns:verPartidosActualizar" />
+
+<xs:element name="verPartidosActualizarResponse" type="tns:verPartidosActualizarResponse" />
+
+<xs:element name="verPartidosApostar" type="tns:verPartidosApostar" />
+
+<xs:element name="verPartidosApostarResponse" type="tns:verPartidosApostarResponse" />
+
+<xs:element name="verPartidosResponse" type="tns:verPartidosResponse" />
+
+<xs:complexType name="crearPartido">
+<xs:sequence>
+<xs:element name="fecha" type="xs:string" minOccurs="0" />
+<xs:element name="resultado" type="xs:string" minOccurs="0" />
+<xs:element name="local" type="xs:int" />
+<xs:element name="visita" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="crearPartidoResponse">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="consultaPartido">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="consultaPartidoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:partido" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="partido">
+<xs:sequence>
+<xs:element name="equipoIdequipo" type="xs:int" />
+<xs:element name="equipoIdequipo1" type="xs:int" />
+<xs:element name="fecha" type="xs:dateTime" minOccurs="0" />
+<xs:element name="idpartido" type="xs:int" minOccurs="0" />
+<xs:element name="resultado" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="verPartidos">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="verPartidosResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:partido" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="actualizarResultado">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int" />
+<xs:element name="arg1" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="actualizarResultadoResponse">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="verPartidosApostar">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="verPartidosApostarResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:partido" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="verPartidosActualizar">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="verPartidosActualizarResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:partido" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

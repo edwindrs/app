@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2-hudson-740-. --><xs:schema xmlns:tns="http://ws.edu.uniminuto.co/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://ws.edu.uniminuto.co/">
+
+<xs:element name="actualizarApuesta" type="tns:actualizarApuesta" />
+
+<xs:element name="actualizarApuestaResponse" type="tns:actualizarApuestaResponse" />
+
+<xs:element name="consultaApuesta" type="tns:consultaApuesta" />
+
+<xs:element name="consultaApuestaResponse" type="tns:consultaApuestaResponse" />
+
+<xs:element name="crearApuesta" type="tns:crearApuesta" />
+
+<xs:element name="crearApuestaResponse" type="tns:crearApuestaResponse" />
+
+<xs:element name="verApuestas" type="tns:verApuestas" />
+
+<xs:element name="verApuestasPago" type="tns:verApuestasPago" />
+
+<xs:element name="verApuestasPagoResponse" type="tns:verApuestasPagoResponse" />
+
+<xs:element name="verApuestasResponse" type="tns:verApuestasResponse" />
+
+<xs:element name="verApuestasUsuario" type="tns:verApuestasUsuario" />
+
+<xs:element name="verApuestasUsuarioResponse" type="tns:verApuestasUsuarioResponse" />
+
+<xs:complexType name="actualizarApuesta">
+<xs:sequence>
+<xs:element name="idApuesta" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="actualizarApuestaResponse">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="verApuestasPago">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="verApuestasPagoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:apuesta" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="apuesta">
+<xs:sequence>
+<xs:element name="apuesta" type="xs:string" minOccurs="0" />
+<xs:element name="estado" type="xs:byte" minOccurs="0" />
+<xs:element name="fecha" type="xs:dateTime" minOccurs="0" />
+<xs:element name="idApuesta" type="xs:int" minOccurs="0" />
+<xs:element name="partidoIdpartido" type="xs:int" />
+<xs:element name="usuarioIdusuario" type="xs:int" />
+<xs:element name="valor" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="verApuestasUsuario">
+<xs:sequence>
+<xs:element name="usuarioIdusuario" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="verApuestasUsuarioResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:apuesta" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="crearApuesta">
+<xs:sequence>
+<xs:element name="apuesta" type="xs:string" minOccurs="0" />
+<xs:element name="valor" type="xs:int" />
+<xs:element name="fecha" type="xs:string" minOccurs="0" />
+<xs:element name="estado" type="xs:byte" />
+<xs:element name="idusuario" type="xs:int" />
+<xs:element name="idpartido" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="crearApuestaResponse">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="consultaApuesta">
+<xs:sequence>
+<xs:element name="idApuesta" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="consultaApuestaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:apuesta" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="verApuestas">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="verApuestasResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:apuesta" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:8084/App_Apuestas/usuariows?wsdl" uri="wsdl/localhost_8084/App_Apuestas/usuariows.wsdl"/>
+    <system systemId="http://localhost:8084/App_Apuestas/usuariows?xsd=1" uri="wsdl/localhost_8084/App_Apuestas/usuariows.xsd_1.xsd"/>
+    <system systemId="http://localhost:8084/App_Apuestas/deportews?wsdl" uri="wsdl/localhost_8084/App_Apuestas/deportews.wsdl"/>
+    <system systemId="http://localhost:8084/App_Apuestas/deportews?xsd=1" uri="wsdl/localhost_8084/App_Apuestas/deportews.xsd_1.xsd"/>
+    <system systemId="http://localhost:8084/App_Apuestas/equipows?wsdl" uri="wsdl/localhost_8084/App_Apuestas/equipows.wsdl"/>
+    <system systemId="http://localhost:8084/App_Apuestas/equipows?xsd=1" uri="wsdl/localhost_8084/App_Apuestas/equipows.xsd_1.xsd"/>
+    <system systemId="http://localhost:8084/App_Apuestas/partidows?wsdl" uri="wsdl/localhost_8084/App_Apuestas/partidows.wsdl"/>
+    <system systemId="http://localhost:8084/App_Apuestas/partidows?xsd=1" uri="wsdl/localhost_8084/App_Apuestas/partidows.xsd_1.xsd"/>
+</catalog>

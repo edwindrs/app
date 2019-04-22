@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 17/04/2019 01:32:48 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="co.uniminuto.edu.pojos.Partido" table="partido" catalog="app" optimistic-lock="version">
+        <id name="idpartido" type="java.lang.Integer">
+            <column name="idpartido" />
+            <generator class="identity" />
+        </id>
+        <property name="fecha" type="timestamp">
+            <column name="fecha" length="19" />
+        </property>
+        <property name="resultado" type="string">
+            <column name="resultado" length="45" />
+        </property>
+        <property name="equipoIdequipo" type="int">
+            <column name="equipo_idequipo" not-null="true" />
+        </property>
+        <property name="equipoIdequipo1" type="int">
+            <column name="equipo_idequipo1" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

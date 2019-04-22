@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jax-ws xmlns="http://www.netbeans.org/ns/jax-ws/1">
+  <services>
+    <service name="usuariows">
+      <implementation-class>co.uniminuto.edu.ws.usuariows</implementation-class>
+    </service>
+    <service name="deportews">
+      <implementation-class>co.uniminuto.edu.ws.deportews</implementation-class>
+    </service>
+    <service name="equipows">
+      <implementation-class>co.uniminuto.edu.ws.equipows</implementation-class>
+    </service>
+    <service name="partidows">
+      <implementation-class>co.uniminuto.edu.ws.partidows</implementation-class>
+    </service>
+    <service name="apuestaws">
+      <implementation-class>co.uniminuto.edu.ws.apuestaws</implementation-class>
+    </service>
+  </services>
+  <clients/>
+  <jsr109>false</jsr109>
+</jax-ws>

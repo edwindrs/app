@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoints version="2.0" xmlns="http://java.sun.com/xml/ns/jax-ws/ri/runtime">
+  <endpoint implementation="co.uniminuto.edu.ws.usuariows" name="usuariows" url-pattern="/usuariows"/>
+  <endpoint implementation="co.uniminuto.edu.ws.deportews" name="deportews" url-pattern="/deportews"/>
+  <endpoint implementation="co.uniminuto.edu.ws.equipows" name="equipows" url-pattern="/equipows"/>
+  <endpoint implementation="co.uniminuto.edu.ws.partidows" name="partidows" url-pattern="/partidows"/>
+  <endpoint implementation="co.uniminuto.edu.ws.apuestaws" name="apuestaws" url-pattern="/apuestaws"/>
+</endpoints>

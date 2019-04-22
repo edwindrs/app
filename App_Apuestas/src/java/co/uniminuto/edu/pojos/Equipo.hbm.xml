@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 17/04/2019 01:32:48 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="co.uniminuto.edu.pojos.Equipo" table="equipo" catalog="app" optimistic-lock="version">
+        <id name="idequipo" type="java.lang.Integer">
+            <column name="idequipo" />
+            <generator class="identity" />
+        </id>
+        <property name="equipo" type="string">
+            <column name="equipo" length="45" />
+        </property>
+        <property name="deporteIddeporte" type="int">
+            <column name="deporte_iddeporte" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

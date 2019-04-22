@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2-hudson-740-. --><xs:schema xmlns:tns="http://ws.edu.uniminuto.co/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://ws.edu.uniminuto.co/">
+
+<xs:element name="consultaDeporte" type="tns:consultaDeporte" />
+
+<xs:element name="consultaDeporteResponse" type="tns:consultaDeporteResponse" />
+
+<xs:element name="crearDeporte" type="tns:crearDeporte" />
+
+<xs:element name="verDeportes" type="tns:verDeportes" />
+
+<xs:element name="verDeportesResponse" type="tns:verDeportesResponse" />
+
+<xs:complexType name="verDeportes">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="verDeportesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:deporte" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deporte">
+<xs:sequence>
+<xs:element name="deporte" type="xs:string" minOccurs="0" />
+<xs:element name="iddeporte" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="consultaDeporte">
+<xs:sequence>
+<xs:element name="iddeporte" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="consultaDeporteResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="crearDeporte">
+<xs:sequence>
+<xs:element name="deporte" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
